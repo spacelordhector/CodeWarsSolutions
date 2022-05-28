@@ -11,3 +11,12 @@ function removeSmallest(numbers) {
     newNumbers.splice(indexOfMinimumNumber, 1)
     return newNumbers
 }
+//TITTLE: SHORTEST WORD
+//Simple, given a string of words, return the length of the shortest word(s).
+//String will never be empty and you do not need to account for different data types.
+function findShort(s) {
+    let newString = s.split(' ')
+    let lengthStringArray = newString.map(num => num.length)
+    let sortingLengthStringArray = lengthStringArray.sort((a, b) => a - b)
+    return sortingLengthStringArray.shift()
+}
