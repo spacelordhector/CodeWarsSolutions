@@ -20,3 +20,19 @@ function findShort(s) {
     let sortingLengthStringArray = lengthStringArray.sort((a, b) => a - b)
     return sortingLengthStringArray.shift()
 }
+//TITTLE: GET THE MIDDLE CHARACTER
+//You are going to be given a word. Your job is to return the middle character of the word. 
+//If the word's length is odd, return the middle character. 
+//If the word's length is even, return the middle 2 characters.
+function getMiddle(s) {
+    let wordLength = s.length
+    if (wordLength < 2) {
+        return s
+    } else if (wordLength === 2) {
+        return s
+    } else if (wordLength % 2 === 0) {
+        return s.slice((wordLength / 2 - 1), (wordLength / 2 + 1))
+    } else {
+        return s[Math.floor(wordLength / 2)]
+    }
+}
