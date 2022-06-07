@@ -36,3 +36,20 @@ function getMiddle(s) {
         return s[Math.floor(wordLength / 2)]
     }
 }
+//TITLE: ONES AND ZEROS
+//Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+//Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+//However, the arrays can have varying lengths, not just limited to 4.
+const binaryArrayToNumber = function (arr) {
+    let counter = 0;
+    let indexCounter = -1
+    let ex = 1
+    let binaryNumber = 0
+    while (counter < arr.length) {
+        binaryNumber += arr[arr.length + indexCounter] * ex;
+        counter++;
+        indexCounter += -1;
+        ex *= 2;
+    }
+    return binaryNumber
+};
