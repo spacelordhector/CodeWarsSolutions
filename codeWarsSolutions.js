@@ -232,3 +232,18 @@ function countPositivesSumNegatives(input) {
     newArray.push(numberOfPositives, sumNumbers)
     return newArray
 }
+//TITLE: TO SQUARE(ROOT) OR NOT TO SQUARE(ROOT)
+//Write a method, its input is an array of integers as parameter and will process every number from this array.
+//Return a new array with processing every number of the input-array like this:
+//If the number squared root is an integer, return that number into an array, otherwise square the number and put it into the array.
+function squareOrSquareRoot(array) {
+    let newArray = []
+    array.forEach(num => {
+        if (Math.pow(num, 0.5) % 1 === 0) {
+            newArray.push(Math.pow(num, 0.5))
+        } else {
+            newArray.push(Math.pow(num, 2))
+        }
+    })
+    return newArray
+}
