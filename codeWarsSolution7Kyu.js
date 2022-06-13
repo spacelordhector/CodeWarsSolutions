@@ -53,3 +53,11 @@ const binaryArrayToNumber = function (arr) {
     }
     return binaryNumber
 };
+//TITLE: EVEN NUMBERS IN AN ARRAY
+//Given an array of numbers, 
+//return a new array of length number containing the last even numbers from the original array (in the same order). 
+//The original array will be not empty and will contain at least "number" even numbers.
+function evenNumbers(array, number) {
+    let newArray = array.filter(num => num % 2 === 0)
+    return newArray.slice(-number)
+}
