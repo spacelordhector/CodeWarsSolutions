@@ -61,3 +61,14 @@ function evenNumbers(array, number) {
     let newArray = array.filter(num => num % 2 === 0)
     return newArray.slice(-number)
 }
+
+//TITLE: TESTING 1-2-3
+//Write a function which takes a list of strings and returns each line prepended by the correct number.
+//The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+var number = function (array) {
+    let newArray = []
+    for (let i = 0; i < array.length; i++) {
+        newArray.push(`${i + 1}: ${array[i]}`)
+    }
+    return newArray
+}
