@@ -72,3 +72,14 @@ var number = function (array) {
     }
     return newArray
 }
+//TITLE: SUM OF A SEQUENCE
+//Your task is to make function, which returns the sum of a sequence of integers.
+//The sequence is defined by 3 non-negative values: begin, end, step (inclusive).
+//If begin value is greater than the end, function should returns 0
+const sequenceSum = (begin, end, step) => {
+    let total = 0
+    for (let start = begin; start <= end; start += step) {
+        total += start
+    }
+    return total
+};
