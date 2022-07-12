@@ -95,3 +95,21 @@ function solution(str, ending) {
         return false
     }
 }
+
+//TITLE: ANAGRAM DETECTION
+//Complete the function to return true if the two arguments given are anagrams of each other;
+// return false otherwise.
+//Note: anagrams are case insensitive
+var isAnagram = function (test, original) {
+    let testStr = test.toLowerCase().split('')
+    let originalStr = original.toLowerCase().split('')
+    console.log(testStr.sort())
+    console.log(originalStr.sort())
+
+    if (testStr.sort().join('') == originalStr.sort().join('')) {
+        return true
+    } else {
+        return false
+    }
+
+};
